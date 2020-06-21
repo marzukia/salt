@@ -1,0 +1,58 @@
+@import "vars";
+
+.posts {
+    width: 100%;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    @media (min-width: $screen-lg) {
+      width: 80%;
+    }
+}
+.post-item {
+    margin: 10px 0 10px -1em;
+    list-style: none;
+    list-style-position: none;
+}
+
+.post-tag {
+    font-size: 8pt;
+    text-decoration: none;
+    color: #333;
+    background-color: #ccc;
+
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
+
+    &:hover {
+        color: $primary;
+        background-color: $tertiary;
+    }
+    &:active {
+        color: $secondary;
+    }
+}
+
+.post-link {
+    font-size: 11pt;
+    text-decoration: none;
+    color: $primary;
+
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 5px;
+
+    &:hover {
+        color: $primary;
+        background-color: $tertiary;
+    }
+    &:active {
+        color: $secondary;
+    }
+}
+
+.post-date {
+    font-size: 9pt;
+    color: #888;
+
+    padding: 0 5px 0 5px;
+    margin: 0 5px 0 0;
+}

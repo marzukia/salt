@@ -1,0 +1,13 @@
+header {
+    margin-bottom: 50px;
+
+    h1 {
+        font-family: $monospace;
+        font-size: 2.5em;
+        color: $primary
+    }
+
+    a, a:visited {
+        text-decoration: none;
+    }
+}

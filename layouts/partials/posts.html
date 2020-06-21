@@ -1,0 +1,16 @@
+<div class="posts">
+    <ul id="posts">
+        {{ range .Pages }}
+        <li class="post-item">
+            <span class="post-date">{{.Date.Format "2006-01-02"}}</span>
+            <a class="post-link" href="{{.Permalink}}">{{.Title}}</a>
+            {{ if isset .Params "tags" -}}
+            <a href="/tag/" title="{{ $.Scratch.Get "index" }}"><i class="fas fa-tag fa-fw"></i></a>
+            {{ range $index, $name := sort .Params.tags -}}
+                <a class="post-tag" href={{ (printf "/tags/%s/" $name) | urlize }} title="{{$name | markdownify }}">{{$name | markdownify}}</a>
+            {{- end}}
+            {{- end }}
+        </li>
+        {{ end }}
+    </ul>
+</div>
