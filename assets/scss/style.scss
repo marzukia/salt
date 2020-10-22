@@ -38,8 +38,9 @@ li {
 
 table {
     font-size: 0.8em;
-    width: 100%;
     text-align: left;
+    width: 100% !important;
+    table-layout: fixed;
 }
 
 @import "list";
