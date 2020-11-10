@@ -4,10 +4,12 @@
     width: 100%;
     max-width: $maxWidth;
     margin: 0 auto;
+
     @media (min-width: $screen-lg) {
-      width: 80%;
+        width: 80%;
     }
 }
+
 .post-item {
     margin: 10px 0 10px -1em;
     list-style: none;
@@ -27,6 +29,7 @@
         color: $primary;
         background-color: $tertiary;
     }
+
     &:active {
         color: $secondary;
     }
@@ -44,6 +47,7 @@
         color: $primary;
         background-color: $tertiary;
     }
+
     &:active {
         color: $secondary;
     }

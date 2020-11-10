@@ -1,0 +1,44 @@
+.heatmap {
+    margin: 10px 10px;
+    width: 100%;
+
+    @media (min-width: $screen-lg) {
+        width: 45%;
+      }
+}
+
+.heatmap-fixedbox {
+    display: flex;
+    max-width: calc(100%);
+}
+
+.heatmap-xlabels {
+    font-size: 10px;
+    color: #666;
+    width: calc(100%);
+}
+
+.heatmap-xlabels-xlabelx-inner-div {
+    justify-content: center;
+    text-align: center;
+}
+
+.heatmap-data-grid-inner-div {
+    margin: 1px 1px 0 0;
+    text-align: center;
+}
+
+.heatmap-data-grid-data-div {
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.heatmap-data-grid-labels-div {
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    font-size: 10px;
+    padding-right: 5px;
+    color: #666;
+}
