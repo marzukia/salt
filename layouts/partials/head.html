@@ -5,28 +5,35 @@
 
     <meta name="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 
-    <meta property="og:title" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}" />
-    <meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
-    <meta property="og:type" content="website" />
+    <meta property="og:title"
+        content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}" />
+    <meta property="og:image" content='{{ $.Param "ogImage" }}' />
+    <meta property="og:image" content="{{ .Site.Params.defaultOGImage }}" />
+    <meta property="og:description"
+        content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
+    <meta property="og:type" content="article" />
     <meta property="og:url" content="{{.Page.Permalink}}" />
-    <meta itemprop="name" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}">
+    <meta itemprop="name"
+        content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}">
     <meta itemprop="description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}">
-    <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:title" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}"/>
-    <meta name="twitter:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title"
+        content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}" />
+    <meta name="twitter:description"
+        content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
 
     {{ $style := resources.Get "scss/style.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{$style.Permalink}}" >
+    <link rel="stylesheet" href="{{$style.Permalink}}">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', '{{ .Site.Params.googleAnalytics }}');
+        gtag('config', '{{ .Site.Params.googleAnalytics }}');
     </script>
 </head>
