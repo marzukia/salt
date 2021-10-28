@@ -13,8 +13,11 @@ header {
     }
 
     .site-title {
-        padding  : 2em 0;
-        max-width: 50vw;
+        padding: 2em 0;
+
+        svg {
+            max-width: 80vw;
+        }
     }
 
     .socials {
