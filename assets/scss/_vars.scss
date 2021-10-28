@@ -1,24 +1,32 @@
-$screen-sm: 320px;
-$screen-md: 672px;
-$screen-lg: 1056px;
-$screen-xl: 1312px;
+$screen-sm : 320px;
+$screen-md : 672px;
+$screen-lg : 1056px;
+$screen-xl : 1312px;
 $screen-max: 1584px;
 
 $maxWidth: 700px;
 
-$monospace: 'Roboto Mono', 'PT Mono', 'IBM Plex Mono', monospace;
-$sans-serif: 'Lato', 'Noto Sans', 'PT Sans', 'Roboto', sans-serif;
-$serif: 'Lora', 'PT Serif', 'Noto Serif', serif;
+$monospace: 'Roboto Mono',
+'PT Mono',
+'IBM Plex Mono',
+monospace;
+$sans-serif: 'Lato',
+'Noto Sans',
+'PT Sans',
+'Roboto',
+sans-serif;
+$serif: 'Lora',
+'PT Serif',
+'Noto Serif',
+serif;
 
 // Colors
-$nyanza: #DDFFD9;
-$desert-sand: #ECC8AE;
-$middle-red: #D7907B;
-$eggplant: #6C4B5E;
+$nyanza      : #DDFFD9;
+$desert-sand : #ECC8AE;
 $pearlypurple: #B3679B;
-$grey: #ddd;
+$grey        : #ddd;
 
 // Mapping
-$primary: $middle-red;
-$secondary: $eggplant;
-$tertiary: $desert-sand;
+$primary  : #477160;
+$secondary: #ef6f6c;
+$tertiary : $desert-sand;

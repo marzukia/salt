@@ -1,9 +1,9 @@
 @import "vars";
 
 .posts {
-    width: 100%;
+    width    : 100%;
     max-width: $maxWidth;
-    margin: 0 auto;
+    margin   : 0 auto;
 
     @media (min-width: $screen-lg) {
         width: 80%;
@@ -11,7 +11,7 @@
 }
 
 .post-item {
-    list-style: none;
+    list-style         : none;
     list-style-position: none;
 
     @media (min-width: 0) {
@@ -25,16 +25,16 @@
 }
 
 .post-tag {
-    font-size: 8pt;
-    text-decoration: none;
-    color: #333;
+    font-size       : 8pt;
+    text-decoration : none;
+    color           : #333;
     background-color: #ccc;
 
     padding: 1px 5px 1px 5px;
-    margin: 0 0 0 2px;
+    margin : 0 0 0 2px;
 
     &:hover {
-        color: $primary;
+        color           : $primary;
         background-color: $tertiary;
     }
 
@@ -52,15 +52,15 @@
 }
 
 .post-link {
-    font-size: 10pt;
+    font-size      : 10pt;
     text-decoration: none;
-    color: $primary;
+    color          : $primary;
 
     padding: 0 5px 0 5px;
-    margin: 0 5px 0 5px;
+    margin : 0 5px 0 5px;
 
     &:hover {
-        color: $primary;
+        color           : $primary;
         background-color: $tertiary;
     }
 
@@ -71,9 +71,9 @@
 
 .post-date {
     font-size: 9pt;
-    color: #888;
+    color    : #888;
 
 
     padding: 0 5px 0 5px;
-    margin: 0 5px 0 0;
+    margin : 0 5px 0 0;
 }
