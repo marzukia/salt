@@ -16,22 +16,24 @@
     }
 
     .post-title-detail {
-        width          : 325px;
+        border-left: solid 3px #eee;
+        padding-left   : 12px;
         display        : flex;
+        flex-direction : column;
         justify-content: space-between;
 
         span {
             color        : #777;
-            font-size    : 14px;
+            font-size    : 13px;
             margin-bottom: 1px;
             display      : flex;
             align-items  : center;
         }
 
         span::before {
-            font-size   : 20px;
+            font-size   : 15px;
             content     : attr(data-icon);
-            margin-right: 8px;
+            margin-right: 12px;
         }
 
         a,
