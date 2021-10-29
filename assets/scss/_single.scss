@@ -8,6 +8,49 @@
     }
 }
 
+.post-title {
+    margin-bottom: 30px;
+
+    h1 {
+        margin-bottom: 4px;
+    }
+
+    .post-title-detail {
+        width          : 325px;
+        display        : flex;
+        justify-content: space-between;
+
+        span {
+            color        : #777;
+            font-size    : 14px;
+            margin-bottom: 1px;
+            display      : flex;
+            align-items  : center;
+        }
+
+        span::before {
+            font-size   : 20px;
+            content     : attr(data-icon);
+            margin-right: 8px;
+        }
+
+        a,
+        a:hover,
+        a:active {
+            text-decoration: none !important;
+        }
+
+        a {
+            color     : $primary;
+            transition: 0.5s color;
+
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+}
+
 .post-content {
     blockquote {
         margin-left : 1rem;
