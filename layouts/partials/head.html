@@ -7,8 +7,7 @@
     <meta itemprop="name" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}">
 
     <meta property="og:title" content="{{ if not .IsHome }}{{with .Title }}{{ . }}{{ end }}{{else}}{{ .Site.Title }}{{end}}" />
-    <meta property="og:image" content="{{ .Site.Params.defaultOGImage }}" />
-    <meta property="og:image" content='{{ $.Param "ogImage" }}' />
+    <meta property="og:image" content='{{ if $.Param "ogImage" }}{{ with $.Param "ogImage" }}{{ . }}{{end}}{{else}}{{ .Site.Params.defaultOGImage }}{{end}}' />
     <meta property="og:description" content="{{if .IsHome}}{{ .Site.Params.description }}{{else}}{{.Description}}{{end}}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{.Page.Permalink}}" />
